@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchCurrencyAPI, expensesAPI } from '../actions';
+import './WalletForms.css';
 
 class WalletForms extends React.Component {
   constructor(props) {
@@ -47,17 +48,20 @@ class WalletForms extends React.Component {
   renderValue() {
     const { value } = this.state;
     return (
-      <label htmlFor="expenses">
-        Valor
+      <div className='form-add'>
+        <p className='add-despesa'>Adicione uma despesa</p>
+      <p>Valor</p>
         <input
           type="number"
           name="value"
           id="expenses"
           value={ value }
           onChange={ this.handleChange }
-          placeholder="Expenses"
+          className='value'
+          autoComplete='off'
+          placeholder="R$"
         />
-      </label>
+         </div>
 
     );
   }
@@ -65,17 +69,19 @@ class WalletForms extends React.Component {
   renderDescription() {
     const { description } = this.state;
     return (
-      <label htmlFor="Description">
-        Descrição
+      <div className='input-value'>
+      <p>Descrição</p>
         <input
           type="text"
           name="description"
           id="Description"
           value={ description }
           onChange={ this.handleChange }
-          placeholder="Description"
+          className="input-descricao"
+          autoComplete="off"
+          placeholder="Descrição"
         />
-      </label>
+        </div>
     );
   }
 
@@ -83,8 +89,8 @@ class WalletForms extends React.Component {
     const { getDataCurrencies } = this.props;
     const { currency } = this.state;
     return (
-      <label htmlFor="currency">
-        Moeda
+      <div className='input-value'>
+      <p>Moeda</p>
         <select
           name="currency"
           id="currency"
@@ -100,40 +106,43 @@ class WalletForms extends React.Component {
             </option>
           )) }
         </select>
-      </label>
+        </div>
+ 
     );
   }
 
   renderPayment() {
     const { method } = this.state;
     return (
-      <label htmlFor="Method">
-        Método de Pagamento
+      <div className='input-value'>
+      <p>Método de Pagamento</p>
         <select
           name="method"
           id="Method"
           value={ method }
           onChange={ this.handleChange }
+          className='method'
         >
           <option value="Dinheiro">Dinheiro</option>
           <option value="Cartão de crédito">Cartão de crédito</option>
           <option value="Cartão de débito">Cartão de débito</option>
         </select>
-      </label>
+      </div>
     );
   }
 
   renderTag() {
     const { tag } = this.state;
     return (
-      <label htmlFor="Tag">
-        Tag
+      <div className='input-value'>
+      <p>Tag</p>
         <select
           name="tag"
           id="Tag"
           value={ tag }
           onChange={ this.handleChange }
           placeholder="Tag"
+          className='tag'
         >
           <option value="Alimentação">Alimentação</option>
           <option value="Lazer">Lazer</option>
@@ -141,7 +150,7 @@ class WalletForms extends React.Component {
           <option value="Transporte">Transporte</option>
           <option value="Saúde">Saúde</option>
         </select>
-      </label>
+      </div>
     );
   }
 
@@ -156,6 +165,7 @@ class WalletForms extends React.Component {
         <button
           type="button"
           onClick={ () => this.handleSubmit() }
+          className='button-add'
         >
           Adicionar despesa
 

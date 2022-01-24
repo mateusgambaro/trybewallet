@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { requestLogin } from '../actions/index';
+import './Login.css';
+import wallet from '../images/wallet.jpg';
 
 class Login extends React.Component {
   constructor() {
@@ -48,14 +50,16 @@ class Login extends React.Component {
   render() {
     const { email, password, disabled } = this.state;
     return (
-      <div>
+      <div className='login-page'
+      >
+        <div className='login-box'>
         <label htmlFor="email-input">
           Login
           <input
             type="email"
             data-testid="email-input"
             name="email"
-            placeholder="email"
+            placeholder="Email"
             value={ email }
             onChange={ this.handleChange }
           />
@@ -82,6 +86,10 @@ class Login extends React.Component {
             Entrar
           </button>
         </Link>
+        </div>
+        <div className="login-side">
+          <img src={wallet} alt="img-wallet"></img>
+        </div>
       </div>
     );
   }

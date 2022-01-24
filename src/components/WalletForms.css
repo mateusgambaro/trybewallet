@@ -1,0 +1,87 @@
+.form-add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.button-add {
+  margin-top: 30px;
+  width: 80%;
+  text-align: center;
+  margin-left: 40px;
+  height: 30px;
+  background-color: rgb(109, 109, 109);
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.button-add:hover {
+  background-color: rgb(59, 206, 83);
+  color: white;
+}
+
+.add-despesa {
+  margin: 10px 0;
+  margin-bottom: 15px;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.733);
+  font-size: 20px;
+}
+
+.input-value {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+
+.input-value p {
+  margin: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  line-height: 13px;
+}
+
+.value {
+  height: 28px;
+  margin: 0;
+  outline: none;
+  margin-bottom: 50px;
+}
+
+.input-descricao {
+  text-align: center;
+  height: 28px;
+  outline: none;
+}
+
+select {
+  min-width: 80px;
+  height: 28px;
+  text-align: center;
+  outline: none;
+}
+
+.input-descricao,
+.value,
+select {
+  background-color: var(--color-inputs);
+  border: none;
+  border-radius: 50px;
+  color: rgb(112, 112, 112);
+  border-radius: 5px;
+  padding: 0 4px;
+  text-align: center;
+}
+
+.input-descricao::placeholder,
+.value::placeholder {
+  color: rgb(112, 112, 112);
+}

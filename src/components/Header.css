@@ -1,0 +1,43 @@
+:root {
+  --color-wallet: #383838;
+  --color-inputs: #f3f3f3f8;
+}
+
+.header {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.header img {
+  width: 150px;
+  margin-top: 0px;
+  margin-bottom: -35px;
+}
+
+.header h1 {
+  margin-bottom: -15px;
+  color: var(--color-wallet);
+}
+
+.email-total p {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.801);
+  margin-bottom: 10px;
+}
+
+.total-value {
+  font-size: 30px;
+  color: var(--color-wallet);
+  font-weight: 800;
+}
+
+.total-expenses {
+  margin: 0;
+  color: rgba(139, 139, 139, 0.438);
+  font-weight: bold;
+  font-size: 12px;
+}
