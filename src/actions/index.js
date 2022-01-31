@@ -64,3 +64,16 @@ export const expensesAPI = (state, id) => (dispatch) => {
     .then((data) => dispatch(requestAPIExpensesSuccess(state, id, data)))
     .catch((error) => dispatch(requestAPIExpensesError(error)));
 };
+
+export const EDIT_EXPENSE = 'EDIT_EXPENSE';
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
+
+export const deleteExpense = (expense) => ({
+  type: DELETE_EXPENSE,
+  expense,
+});
+
+export const editExpense = (expense) => ({
+  type: EDIT_EXPENSE,
+  expense,
+});

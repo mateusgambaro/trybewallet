@@ -1,0 +1,94 @@
+table-expenses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.table-expenses h1 {
+  margin: 10px;
+}
+
+.box-expenses {
+  width: 150%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  color: black;
+}
+
+.table-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  /* border: 1px solid black; */
+  border-radius: 8px;
+  margin: 2px 0px;
+  margin-left: 20px;
+  /* background-color: #ff715ef1; */
+  color: var(--color-wallet)
+}
+
+.table-column th {
+  color: rgb(124, 199, 90);
+}
+
+.id-column {
+  /* border: 1px solid black; */
+  width: 1%;
+}
+
+.value-column {
+  width: 8%;
+}
+
+.description-column {
+  width: 18%;
+}
+
+.payment-column {
+  width: 16%;
+}
+
+.tag-column {
+  width: 8%;
+}
+
+.cambio-column {
+  width: 6%;
+}
+
+.converted-column {
+  width: 10%;
+}
+
+.buttons-column {
+  width: 15%;
+}
+
+.button-edit-table {
+  text-align: center;
+  height: 20px;
+  background-color: rgb(79, 126, 255);
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-right: 5px;
+}
+
+.button-delete-table {
+  text-align: center;
+  height: 20px;
+  background-color: rgb(255, 82, 82);
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
